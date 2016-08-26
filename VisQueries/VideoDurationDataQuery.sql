@@ -1,0 +1,5 @@
+SELECT '00~05 Min' as DurationRange, COUNT(Duration) as DurationBin, COUNT(DISTINCT(author)) AS AuthorCount FROM uTubeVideos WHERE Duration BETWEEN 1 and 300
+union SELECT '05~10 Min' as DurationRange, COUNT(Duration) as DurationBin, COUNT(DISTINCT(author)) AS AuthorCount FROM uTubeVideos WHERE Duration BETWEEN 301 and 600
+union SELECT '10~15 Min' as DurationRange, COUNT(Duration) as DurationBin, COUNT(DISTINCT(author)) AS AuthorCount FROM uTubeVideos WHERE Duration BETWEEN 601 and 900
+union SELECT '15~20 Min' as DurationRange, COUNT(Duration) as DurationBin, COUNT(DISTINCT(author)) AS AuthorCount FROM uTubeVideos WHERE Duration BETWEEN 901 and 1200
+union SELECT '20~   Min' as DurationRange, COUNT(Duration) as DurationBin, COUNT(DISTINCT(author)) AS AuthorCount FROM uTubeVideos WHERE Duration > 1200
